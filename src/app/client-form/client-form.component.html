@@ -1,0 +1,79 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>
+				Los campos marcados con (*) son obligatorios.
+			</h3>
+		</div>
+	</div>
+
+	<form [formGroup]="clientForm">
+		<div class="row">
+			<div class="col-md-8 form-group">
+				<label for="">Razón social:</label>
+				<input type="text" name="legalName" formControlName="legalName" class="form-control">
+			</div>
+
+			<div class="col-md-4 form-group">
+				<label for="">RFC:</label>
+				<input type="text" formControlName="rfc" class="form-control">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 form-group">
+				<label for="">Nombre comercial:</label>
+				<input type="text" formControlName="comercialName" class="form-control">
+			</div>
+
+			<div class="col-md-2 form-group">
+				<label for="">Persona:</label>
+				<select name="" id="" formControlName="legalType" class="form-control"></select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h4>
+					Información del contacto
+				</h4>
+				<hr/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4 form-group">
+				<label for="">Nombre(s):</label>
+				<input type="text" formControlName="contactName" class="form-control">
+			</div>
+
+			<div class="col-md-4 form-group">
+				<label for="">Apellido paterno:</label>
+				<input type="text" formControlName="contactLastName" class="form-control">
+			</div>
+
+			<div class="col-md-4 form-group">
+				<label for="">Apellido materno:</label>
+				<input type="text" formControlName="contactSecondLastName" class="form-control">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 form-group">
+				<label for="">Correo electrónico:</label>
+				<input type="text" formControlName="contactEmail" class="form-control">
+			</div>
+
+			<div class="col-md-4 form-group">
+				<label for="">Celular:</label>
+				<input type="text" formControlName="contactCellphone" class="form-control">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-success" [disabled]="!clientForm.valid">Guardar</button>
+			</div>
+		</div>
+	</form>
+</div>
